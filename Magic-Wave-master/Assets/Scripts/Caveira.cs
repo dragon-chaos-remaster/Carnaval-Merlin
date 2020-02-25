@@ -26,12 +26,14 @@ public class Caveira : MonoBehaviour
 
     TomaDano dano;
 
+    
+
     Snared snare;
     public float duracaoSnare;
     // Start is called before the first frame update
     void Start()
     {
-
+        
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("player").transform;
         dano = GetComponent<TomaDano>();
@@ -78,9 +80,10 @@ public class Caveira : MonoBehaviour
     {
         Instantiate(flecha, shootPoint.position, shootPoint.rotation);
     }
-
+    
     void OnDisable()
     {
+        dano.vida = 50;
         CancelInvoke();
     }
     void OnTriggerEnter(Collider other)

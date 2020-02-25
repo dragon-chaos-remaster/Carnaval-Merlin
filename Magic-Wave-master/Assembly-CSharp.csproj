@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\FaceCamera.cs" />
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\CameraShakeSimpleScript.cs" />
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\ParticleSystemController\ParticleSystemController.cs" />
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\ParticleSystemController\ParticleSystemControllerEditor.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\UniqueProjectiles\RotateToMouseScript.cs" />
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\UniqueProjectiles\SpawnProjectilesScript.cs" />
     <Compile Include="Assets\Scripts\AtaqueBasico.cs" />
+    <Compile Include="Assets\Scripts\BarraDeVida.cs" />
     <Compile Include="Assets\Scripts\Caveira.cs" />
     <Compile Include="Assets\Scripts\Coletavel.cs" />
     <Compile Include="Assets\Scripts\ControleJogador.cs" />
@@ -121,37 +123,37 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Magic-Wave-master/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Carnaval/Magic-Wave-master/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Magic-Wave-master/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Carnaval/Magic-Wave-master/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Magic-Wave-master/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Carnaval/Magic-Wave-master/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Magic-Wave-master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Carnaval/Magic-Wave-master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Magic-Wave-master/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Carnaval/Magic-Wave-master/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Magic-Wave-master/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Carnaval/Magic-Wave-master/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Magic-Wave-master/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Carnaval/Magic-Wave-master/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Magic-Wave-master/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Carnaval/Magic-Wave-master/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Magic-Wave-master/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Carnaval/Magic-Wave-master/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Magic-Wave-master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Carnaval/Magic-Wave-master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Magic-Wave-master/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/_NOVO_NOTEBOOK_CAIO/Documents/Github MERLIN/23 02 2020/Carnaval/Magic-Wave-master/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Program Files/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
