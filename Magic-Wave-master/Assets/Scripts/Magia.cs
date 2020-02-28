@@ -87,6 +87,14 @@ public class Magia : MonoBehaviour
             Atacando();
             TempoTiro();
         }
+        if (!player.activeInHierarchy)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
     }
 
 

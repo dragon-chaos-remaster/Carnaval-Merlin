@@ -19,8 +19,8 @@ public class VidaManaPlayer : MonoBehaviour
         quantidadeVida.text = (int)vida + " HP ";
         if (vida <= 0)
         {
-            Destroy(gameObject);
-            //gameObject.SetActive(false);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         if (vida > 100)
         {

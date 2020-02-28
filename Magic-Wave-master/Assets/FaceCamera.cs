@@ -11,7 +11,7 @@ public class FaceCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 targetPos = new Vector3(transform.position.x,cameraPos.position.y, cameraPos.position.z);
+        Vector3 targetPos = new Vector3(cameraPos.position.x,transform.position.y, cameraPos.position.z);
         transform.LookAt(targetPos);
     }
 }
