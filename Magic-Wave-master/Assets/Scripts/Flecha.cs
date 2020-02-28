@@ -22,13 +22,15 @@ public class Flecha : MonoBehaviour
         fisica = GetComponent<Rigidbody>();
         flecha = GetComponent<Transform>();
 
-        fisica.AddForce(flecha.forward * velocidadeProjetil);
+        //fisica.AddForce(flecha.forward * velocidadeProjetil);
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        fisica.velocity = flecha.forward * velocidadeProjetil * Time.deltaTime;
+
         tempoViva += tempoAtual * Time.deltaTime;
         if (tempoViva >= tempoDestruicao)
         {

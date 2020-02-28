@@ -13,13 +13,13 @@ public class TomaDano : MonoBehaviour
     private void Start()
     {
         //barraVida = GetComponentInChildren<BarraDeVida>();
-        barraVida.SetVidaMaxima(vida);
+        //barraVida.SetVidaMaxima(vida);
     }
     public void TomarDanos(int quantidade)
     {
         vida -= quantidade;
 
-        barraVida.SetVida(vida);
+        //barraVida.SetVida(vida);
         if (vida <= 0)
         {
             gameObject.SetActive(false);

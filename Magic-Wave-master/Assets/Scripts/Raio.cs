@@ -13,21 +13,27 @@ public class Raio : MonoBehaviour
     public Transform raio;
     public float velocidadeProjetil;
 
-
+    public int limiteDeRicochete;
+    int ricochetes;
     // Start is called before the first frame update
     void Start()
     {
         fisica = GetComponent<Rigidbody>();
         raio = GetComponent<Transform>();
 
-        fisica.AddForce(raio.forward * velocidadeProjetil);
+        //fisica.AddForce(raio.forward * velocidadeProjetil);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        fisica.velocity = raio.forward * velocidadeProjetil * Time.deltaTime;
+        if(ricochetes >= limiteDeRicochete)
+        {
+            ricochetes = 0;
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -44,16 +50,21 @@ public class Raio : MonoBehaviour
                 if (inimigoMaisPerto == null || Vector3.Distance(inimigoMaisPerto.position, raio.position) > Vector3.Distance(inimigos[i].transform.position, raio.position))
                 {
                     inimigoMaisPerto = inimigos[i].transform;
-
+                    print(inimigos[i].transform);
                 }
             }
 
         }
+        if (other.gameObject.CompareTag("inimigoTerra") || other.gameObject.CompareTag("inimigoFraco"))
+        {
+            print(ricochetes);
+            ricochetes++;
+        }
         raio.LookAt(inimigoMaisPerto);
     }
-    void OnCollisionEnter(Collision bateu)
+    /*void OnCollisionEnter(Collision bateu)
     {
+        
 
-
-    }
+    }*/
 }

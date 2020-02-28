@@ -20,13 +20,14 @@ public class AtaqueBasico : MonoBehaviour
         fisica = GetComponent<Rigidbody>();
         foguinho = GetComponent<Transform>();
 
-        fisica.AddForce(foguinho.forward * velocidadeProjetil);
+        //fisica.AddForce(foguinho.forward * velocidadeProjetil);
     }
 
     // Update is called once per frame
     void Update()
     {
         tempoViva += tempoAtual * Time.deltaTime;
+        fisica.velocity = foguinho.forward * velocidadeProjetil * Time.deltaTime;
         if (tempoViva >= tempoDestruicao)
         {
             Destroy(gameObject);

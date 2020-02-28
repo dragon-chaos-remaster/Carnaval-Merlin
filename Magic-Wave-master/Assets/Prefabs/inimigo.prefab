@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1098119009761256555}
   - component: {fileID: 6284305620192632485}
   m_Layer: 0
-  m_Name: inimigo (2)
+  m_Name: inimigo
   m_TagString: inimigoFraco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 30
+  barraVida: {fileID: 0}
 --- !u!195 &1098119009761256554
 NavMeshAgent:
   m_ObjectHideFlags: 0

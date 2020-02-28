@@ -13,12 +13,11 @@ public class Raizes : MonoBehaviour
         fisica = GetComponent<Rigidbody>();
         raizes = GetComponent<Transform>();
 
-        fisica.AddForce(raizes.forward * velocidadeProjetil);
+        //fisica.AddForce(raizes.forward * velocidadeProjetil);
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        fisica.velocity = raizes.forward * velocidadeProjetil * Time.deltaTime;
     }
 }

@@ -8,7 +8,13 @@ public class WaveSpawner : MonoBehaviour
 {
    
     public Pooling[] pooledObjects;
-    
+
+    public TimeManager tempo;
+
+    //Referência ao Golpe do vilão DIO BRANDO, de Jojo's Bizarre Adventures: Stardust Crusaders, onde ele para o Tempo 
+    bool zaWarudo = true;
+    //KONO DIO DA
+
     [System.Serializable]
     public class Wave
     {
@@ -49,11 +55,13 @@ public class WaveSpawner : MonoBehaviour
             //Checar se os inimigos ainda estão vivos
             if (!InimigoVivo())
             {
+                
                 OnWaveCompleted();
                 WaveCount.Instance.numeroDaWave++;
                 contagemRegressiva[0].gameObject.SetActive(true);
                 contagemRegressiva[1].gameObject.SetActive(true);
                 print("Wave Completa");
+                //zaWarudo = true;
                 return;
                 //Começa um novo round
             }
@@ -65,12 +73,16 @@ public class WaveSpawner : MonoBehaviour
         int someInt = (int)contadorDaWave;
         contagemRegressiva[0].text = someInt.ToString();
         contagemRegressiva[1].text = someInt.ToString();
-
-        if(contadorDaWave <= 0)
+        if (!zaWarudo)
+        {
+            Time.fixedDeltaTime = .02f;
+        }
+        if (contadorDaWave <= 0)
         {
             WaveCount.Instance.waveClear.gameObject.SetActive(false);
             contagemRegressiva[0].gameObject.SetActive(false);
             contagemRegressiva[1].gameObject.SetActive(false);
+            zaWarudo = false;
             if (estado != SpawnState.SPAWNANDO)
             {
                 //Começa a spawnar a Wave
@@ -90,6 +102,9 @@ public class WaveSpawner : MonoBehaviour
             procurarContador = 1f;
             if (GameObject.FindGameObjectWithTag("inimigoFraco") == null && GameObject.FindGameObjectWithTag("inimigoTerra") == null)
             {
+                //FREEZE FRAME NO ULTIMO INIMIGO
+                //tempo.FreezeFrame();
+                
                 //print(GameObject.FindGameObjectWithTag("Enemy").ToString());
                 return false;
             }
@@ -100,6 +115,7 @@ public class WaveSpawner : MonoBehaviour
     {
         estado = SpawnState.CONTANDO;
         contadorDaWave = tempoEntreWaves;
+        tempo.FreezeFrame();
         WaveCount.Instance.waveClear.gameObject.SetActive(true);
         if(proximaWave + 1 > waves.Length - 1)
         {
