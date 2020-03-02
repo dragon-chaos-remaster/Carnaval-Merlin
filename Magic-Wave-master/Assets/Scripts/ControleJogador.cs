@@ -33,8 +33,10 @@ public class ControleJogador : MonoBehaviour
 
 
         }
+        //Apenas inverti os valores do movimento baseado no Angulo da Camera, se preferir que a camera fique do jeito Original, basta retirar as 2 barrinhas "//" da linha abaixo e apagar a linha invertida
 
-        movimento = new Vector3((Input.GetAxisRaw("Horizontal")), 0f, (Input.GetAxisRaw("Vertical")));
+        //movimento = new Vector3((Input.GetAxisRaw("Horizontal")), 0f , (Input.GetAxisRaw("Vertical")));
+        movimento = new Vector3((Input.GetAxisRaw("Vertical")), 0f, -(Input.GetAxisRaw("Horizontal")));
         movimento = movimento.normalized * speed * Time.deltaTime;
         fisica.MovePosition(transform.position + movimento);
 

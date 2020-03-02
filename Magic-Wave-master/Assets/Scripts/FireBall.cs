@@ -15,11 +15,7 @@ public class FireBall : MonoBehaviour
         ondeNasce = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
 
 
 

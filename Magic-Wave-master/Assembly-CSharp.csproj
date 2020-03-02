@@ -72,6 +72,7 @@
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\UniqueProjectiles\RotateToMouseScript.cs" />
     <Compile Include="Assets\GabrielAguiarProductions\Unique_Projectiles_Volume_1\Scripts\UniqueProjectiles\SpawnProjectilesScript.cs" />
     <Compile Include="Assets\Scripts\AtaqueBasico.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\BarraDeVida.cs" />
     <Compile Include="Assets\Scripts\Caveira.cs" />
     <Compile Include="Assets\Scripts\Coletavel.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\Scripts\Raio.cs" />
     <Compile Include="Assets\Scripts\Raizes.cs" />
     <Compile Include="Assets\Scripts\Snared.cs" />
+    <Compile Include="Assets\Scripts\Som.cs" />
     <Compile Include="Assets\Scripts\Tank.cs" />
     <Compile Include="Assets\Scripts\TimeManager.cs" />
     <Compile Include="Assets\Scripts\TomaDano.cs" />

@@ -138,36 +138,38 @@ public class Magia : MonoBehaviour
 
     }
 
+    
 
     void Atacando()
     {
         if ((Input.GetMouseButtonDown(0)) && (!EventSystem.current.IsPointerOverGameObject()))
         {
-
+            print("pei");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100, hitavel) && (bolaFogo) && (updatedMana >= custoManaFogo) && (coolDown.podeAtacarFogo))
             {
 
-                Instantiate(fireBall, new Vector3(hit.point.x, 20, hit.point.z), Quaternion.Euler(hit.normal));
+                GameObject aux = Instantiate(fireBall, new Vector3(hit.point.x, 20, hit.point.z), Quaternion.Euler(hit.normal));
                 updatedMana -= custoManaFogo;
                 coolDown.podeAtacarFogo = false;
                 coolDown.waitFireRateFogo = 1;
             }
             if (Physics.Raycast(ray, out hit, 100, hitavel) && (raio) && (updatedMana >= custoManaRaio) && (coolDown.podeAtacarRaio))
             {
-                Instantiate(choque, choquePoint.position, choquePoint.rotation);
+                GameObject aux = Instantiate(choque, choquePoint.position, choquePoint.rotation);
                 updatedMana -= custoManaRaio;
                 coolDown.podeAtacarRaio = false;
                 coolDown.waitFireRateRaio = 1;
             }
             if (Physics.Raycast(ray, out hit, 100, hitavel) && (seiLa) && (updatedMana >= custoManaNaoSei) && (coolDown.podeAtacarSnare))
             {
-                Instantiate(raizes, raizesPoint.position, raizesPoint.rotation);
+                Transform aux = Instantiate(raizes, raizesPoint.position, raizesPoint.rotation);
                 updatedMana -= custoManaNaoSei;
                 coolDown.podeAtacarSnare = false;
                 coolDown.waitFireRateSnare = 1;
             }
 
+            Debug.DrawRay(ray.origin, new Vector3(hit.point.x, 20, hit.point.z), Color.magenta);
 
 
         }
